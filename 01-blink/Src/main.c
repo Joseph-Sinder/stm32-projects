@@ -10,9 +10,9 @@ int main(void)
     GPIOA_MODER &= ~(3U << 10);
     GPIOA_MODER |= (1U << 10);
     while(1){
-    	GPIOA_ODR |= (1U << 5);
-    	for(volatile int i = 0; i < 100000; i++){}
-    	GPIOA_ODR &= ~(1U << 5);
-    	for(volatile int i = 0; i < 100000; i++){}
+        GPIOA_ODR |= (1U << 5);
+        for(volatile int i = 0; i < 100000; i++){}
+        GPIOA_ODR &= ~(1U << 5);
+        for(volatile int i = 0; i < 100000; i++){}
     }
 }

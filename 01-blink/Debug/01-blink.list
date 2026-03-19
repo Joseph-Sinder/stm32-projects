@@ -43,11 +43,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  19 .debug_line   000004b5  00000000  00000000  000114e5  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    00003c48  00000000  00000000  0001199a  2**0
+ 20 .debug_str    00003c46  00000000  00000000  0001199a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_frame  00000058  00000000  00000000  000155e4  2**2
+ 21 .debug_frame  00000058  00000000  00000000  000155e0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 00000064  00000000  00000000  0001563c  2**0
+ 22 .debug_line_str 00000062  00000000  00000000  00015638  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -109,13 +109,13 @@ int main(void)
  80001f0:	f443 6380 	orr.w	r3, r3, #1024	; 0x400
  80001f4:	6013      	str	r3, [r2, #0]
     while(1){
-    	GPIOA_ODR |= (1U << 5);
+        GPIOA_ODR |= (1U << 5);
  80001f6:	4b11      	ldr	r3, [pc, #68]	; (800023c <main+0x78>)
  80001f8:	681b      	ldr	r3, [r3, #0]
  80001fa:	4a10      	ldr	r2, [pc, #64]	; (800023c <main+0x78>)
  80001fc:	f043 0320 	orr.w	r3, r3, #32
  8000200:	6013      	str	r3, [r2, #0]
-    	for(volatile int i = 0; i < 100000; i++){}
+        for(volatile int i = 0; i < 100000; i++){}
  8000202:	2300      	movs	r3, #0
  8000204:	607b      	str	r3, [r7, #4]
  8000206:	e002      	b.n	800020e <main+0x4a>
@@ -126,13 +126,13 @@ int main(void)
  8000210:	4a0b      	ldr	r2, [pc, #44]	; (8000240 <main+0x7c>)
  8000212:	4293      	cmp	r3, r2
  8000214:	ddf8      	ble.n	8000208 <main+0x44>
-    	GPIOA_ODR &= ~(1U << 5);
+        GPIOA_ODR &= ~(1U << 5);
  8000216:	4b09      	ldr	r3, [pc, #36]	; (800023c <main+0x78>)
  8000218:	681b      	ldr	r3, [r3, #0]
  800021a:	4a08      	ldr	r2, [pc, #32]	; (800023c <main+0x78>)
  800021c:	f023 0320 	bic.w	r3, r3, #32
  8000220:	6013      	str	r3, [r2, #0]
-    	for(volatile int i = 0; i < 100000; i++){}
+        for(volatile int i = 0; i < 100000; i++){}
  8000222:	2300      	movs	r3, #0
  8000224:	603b      	str	r3, [r7, #0]
  8000226:	e002      	b.n	800022e <main+0x6a>
@@ -143,7 +143,7 @@ int main(void)
  8000230:	4a03      	ldr	r2, [pc, #12]	; (8000240 <main+0x7c>)
  8000232:	4293      	cmp	r3, r2
  8000234:	ddf8      	ble.n	8000228 <main+0x64>
-    	GPIOA_ODR |= (1U << 5);
+        GPIOA_ODR |= (1U << 5);
  8000236:	e7de      	b.n	80001f6 <main+0x32>
  8000238:	4002104c 	.word	0x4002104c
  800023c:	48000014 	.word	0x48000014
