@@ -1,0 +1,18 @@
+!SESSION 2026-03-19 19:31:39.420 -----------------------------------------------
+eclipse.buildId=Version 1.14.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\Joe Sinder\STM32CubeIDE\stm32-bare-metal
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-03-19 19:31:45.374
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-03-19 19:31:45.383
+!MESSAGE Log4j2 initialized with config file C:\Users\Joe Sinder\STM32CubeIDE\stm32-bare-metal\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-03-19 19:31:49.646
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-03-19 19:32:24.832
+!MESSAGE Indexed '01-blink' (2 sources, 20 headers) in 0.879 sec: 371 declarations; 938 references; 8 unresolved inclusions; 0 syntax errors; 16 unresolved names (1.2%)
